@@ -12,10 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-	- name: Checkout code
-  	  uses: actions/checkout@v4
-  	  with:
-    	     persist-credentials: true
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
         
       - name: Install dependencies        
 	run: npm ci
