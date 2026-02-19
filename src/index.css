@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling for entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base styles */
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+}
+
+/* Section spacing consistency */
+section {
+  @apply py-16 md:py-24;
+}
