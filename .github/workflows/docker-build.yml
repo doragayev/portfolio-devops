@@ -36,7 +36,8 @@ jobs:
 
       - name: Update image tag in deployment
         run: |
-          sed -i '' "s|doragayev/portfolio-project:.*|doragayev/portfolio-project:${IMAGE_TAG}|g" k8s/base/deployment.yaml
+          sed -i "s|doragayev/portfolio-project:.*|doragayev/portfolio-project:${IMAGE_TAG}|g" k8s/base/deployment.yaml
+
 
 
       - name: Commit and push changes
