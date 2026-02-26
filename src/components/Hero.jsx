@@ -24,7 +24,7 @@ export default function Hero() {
               DevOps Engineer | NOC Analyst
             </p>
             <p className="text-slate-600 text-lg max-w-2xl mb-8 leading-relaxed">
-              DevOps-oriented NOC Engineer with hands-on experience monitoring mission-critical production environments in sensitive on-prem infrastructures. background in incident management, system reliability, and automation fundamentals. Passionate about CI/CD, containerization, and building scalable infrastructure.
+              DevOps-oriented NOC Engineer experienced in managing and monitoring mission-critical production systems in secure on-prem environments. Skilled in incident response, system reliability, and operational troubleshooting, with growing hands-on experience in CI/CD pipelines, containerization, and Kubernetes-based deployments.
             </p>
 
             {/* CTA buttons */}
