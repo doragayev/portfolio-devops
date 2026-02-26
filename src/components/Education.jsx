@@ -30,7 +30,7 @@ const education = [
       'AWS',
       'Terraform',
       'Lambda',
-      'Ansible'
+      'Ansible',
       'Jenkins',
     ],
   },
