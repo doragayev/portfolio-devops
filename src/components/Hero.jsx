@@ -12,7 +12,7 @@ export default function Hero() {
             <img
                 src={`${import.meta.env.BASE_URL}profilepic1.jpg`}
                 alt="Dor Agayev"
-                className="w-48 h-48 rounded-2xl object-cover shadow-card hover:shadow-card-hover transition-shadow"
+                className="w-48 h-auto rounded-2xl object-cover shadow-card hover:shadow-card-hover transition-shadow"
             />
           </div>
 
