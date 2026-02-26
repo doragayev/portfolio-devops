@@ -17,9 +17,8 @@ const education = [
   },
   {
     degree: 'DevOps Expert Course',
-    program: 'Currently Enrolled',
-    institution: null,
-    years: null,
+    institution: 'Devops Expert' ,
+    years: '2025',
     highlights: [
       'Docker',
       'Kubernetes',
@@ -27,11 +26,12 @@ const education = [
       'GitHub Actions',
       'CI/CD',
       'ArgoCD',
-      'Prometheus (upcoming)',
+      'Prometheus',
       'AWS',
       'Terraform',
       'Lambda',
-      'Ansible',
+      'Ansible'
+      'Jenkins',
     ],
   },
 ]
