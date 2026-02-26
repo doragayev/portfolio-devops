@@ -10,7 +10,7 @@ export default function Hero() {
           {/* Profile image - served from public/ at root */}
           <div className="flex-shrink-0">
             <img
-              src="/profilepic.jpg"
+              src={`${import.meta.env.BASE_URL}profilepic.jpg`}"
               alt="Dor Agayev"
               className="w-48 h-48 rounded-2xl object-cover shadow-card hover:shadow-card-hover transition-shadow"
             />
