@@ -21,10 +21,11 @@ export default function Hero() {
               Dor Agayev
             </h1>
             <p className="text-xl text-primary-600 font-semibold mb-4">
-              DevOps Engineer | NOC Analyst
+              NOC Analyst | DevOps Engineer (Transitioning)
             </p>
             <p className="text-slate-600 text-lg max-w-2xl mb-8 leading-relaxed">
-              DevOps-oriented NOC Engineer experienced in managing and monitoring mission-critical production systems in secure on-prem environments. Skilled in incident response, system reliability, and operational troubleshooting, with growing hands-on experience in CI/CD pipelines, containerization, and Kubernetes-based deployments.
+              DevOps-oriented NOC Engineer experienced in monitoring and supporting mission-critical production systems in secure on-prem environments.
+              Skilled in incident response, system reliability, and operational troubleshooting, while building hands-on experience with CI/CD pipelines, Docker, and modern DevOps practices.
             </p>
 
             {/* CTA buttons */}
