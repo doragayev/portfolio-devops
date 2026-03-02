@@ -5,16 +5,20 @@ import SectionWrapper from './SectionWrapper'
 
 const categories = [
   {
-    title: 'Version Control & CI/CD',
-    technologies: ['Git', 'GitHub Actions', 'CI/CD', 'ArgoCD'],
-  },
-  {
     title: 'Containers & Orchestration',
-    technologies: ['Docker', 'Kubernetes', 'Helm', 'OpenShift'],
+    technologies: ['Docker', 'Kubernetes (hands-on learning)', 'Helm (basic)', 'OpenShift (operations support)', 'ArgoCD (GitOps practice)'],
   },
   {
-    title: 'Infrastructure & Cloud',
-    technologies: ['VMware', 'Linux', 'Windows', 'AWS', 'AWS Lambda', 'Terraform', 'Ansible'],
+    title: 'Version Control & CI/CD',
+    technologies: ['Git', 'GitHub Actions', 'CI/CD Pipelines'],
+  },
+  {
+    title: 'Infrastructure & Operations',
+    technologies: ['Linux', 'Windows Server', 'VMware', 'Production Monitoring & Incident Response'],
+  },
+  {
+    title: 'Cloud & Automation',
+    technologies: ['AWS (Foundation), Terraform (Learning), Ansible (Learning), AWS Lambda(basic)'],
   },
 ]
 
@@ -26,7 +30,7 @@ export default function TechStack() {
           Tech Stack
         </h2>
         <p className="text-slate-600 text-lg mb-12 max-w-2xl">
-          Tools and technologies I work with daily.
+          Technologies used in production operations and personal DevOps projects
         </p>
 
         <div className="space-y-10">
