@@ -5,19 +5,19 @@ import SectionWrapper from './SectionWrapper'
 
 const jobs = [
   {
-    title: 'NOC Engineer',
+    title: 'NOC Engineer (Production Operations)',
     company: 'Matrix (Client: Confidential Government Organization)',
     location: 'Tel-Aviv',
     years: '2022 – Today',
     responsibilities: [
-      'Monitored mission-critical systems using Grafana, Kibana, Splunk, and Nagios',
-      'Investigated and resolved incidents across Linux (RedHat), Windows, VMware vSphere, and OpenShift',
-      'Used ServiceNow, Jira, and Confluence for incident and process management',
-      'Supported cloud and virtualization environments',
-      'Collaborated with vendors and internal teams',
-      'Worked with ArgoCD, SQL, and automation workflows',
-    ],
-  },
+        'Monitored and maintained mission-critical production systems using Grafana, Kibana, Splunk, and Nagios',
+        'Investigated and resolved production incidents across Linux , Windows, VMware vSphere, and OpenShift environments',
+        'Managed incidents and operational processes using ServiceNow, Jira, and Confluence',
+        'Supported virtualization and hybrid infrastructure environments',
+        'Collaborated with vendors and internal engineering teams',
+        'Worked with ArgoCD workflows, SQL queries, and operational automation processes',
+  ],
+},
   {
     title: 'Operations and Sales Manager',
     company: 'Preiss Packaging Products',
