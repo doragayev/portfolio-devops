@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: portfolio-container
-          image: doragayev/portfolio-project:a477d97
+          image: doragayev/portfolio-project:fc06c98
           imagePullPolicy: Always
           ports:
             - containerPort: 80
