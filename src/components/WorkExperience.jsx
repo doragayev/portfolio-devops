@@ -6,7 +6,7 @@ import SectionWrapper from './SectionWrapper'
 const jobs = [
   {
     title: 'NOC Engineer (Production Operations)',
-    company: 'Matrix (Client: Confidential Government Organization)',
+    company: 'Matrix (Client: Government Organization)',
     location: 'Tel-Aviv',
     years: '2022 – Today',
     responsibilities: [
@@ -24,12 +24,13 @@ const jobs = [
     location: 'Ashdod',
     years: '2017 – 2022',
     responsibilities: [
-      'Promoted from Field Sales Agent',
-      'Managed teams, logistics workflows, and delivery routes',
-      'Maintained supplier and customer relations',
-      'Developed leadership and operational management skills',
-    ],
-  },
+        'Promoted from Field Sales Agent to Operations and Sales Manager',
+        'Managed operational workflows, logistics processes, and delivery planning',
+        'Led teams and coordinated daily operations to ensure service efficiency',
+        'Maintained supplier and customer relationships while optimizing operational processes',
+        'Developed leadership, problem-solving, and cross-team coordination skills',
+  ],
+ },
 ]
 
 export default function WorkExperience() {
