@@ -18,7 +18,7 @@ const categories = [
   },
   {
     title: 'Cloud & Automation',
-    technologies: ['AWS (Foundation), Terraform (Learning), Ansible (Learning), AWS Lambda(basic)'],
+    technologies: ['AWS (Foundation)', 'Terraform (Learning)', 'Ansible (Learning)', 'AWS Lambda(basic)'],
   },
 ]
 
