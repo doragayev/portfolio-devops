@@ -19,8 +19,34 @@ This project was built as a **hands-on learning project** to practice real-world
 ## 🏗️ Architecture
 
 ```
-Developer → GitHub → CI Pipeline → DockerHub → ArgoCD → Kubernetes → Production
+Developer
+→ GitHub (Application Repo)
+→ CI (GitHub Actions / Jenkins)
+→ DockerHub
+→ Helm Repository
+→ ArgoCD (GitOps)
+→ Kubernetes
 ```
+## 🔁 Migration to Helm (GitOps Evolution)
+
+This project initially deployed the application using static Kubernetes manifests located in `k8s/base`.
+
+As part of improving the DevOps workflow, deployment was migrated to a Helm-based architecture managed through a separate repository:
+
+Helm Repository:
+https://github.com/doragayev/portfolio-helm-chart
+
+The new flow:
+
+Developer → Push → CI builds Docker image →  
+Helm repository defines deployment →  
+ArgoCD monitors Helm repo →  
+Kubernetes syncs automatically.
+
+This separation reflects real-world DevOps practices:
+- Application code and infrastructure are decoupled
+- Deployment logic is version-controlled independently
+- GitOps is used as the deployment mechanism
 
 ### Flow
 
@@ -144,7 +170,6 @@ Deployment is handled using **ArgoCD**.
 
 * Deployment
 * Service (NodePort)
-* Ingress (NGINX)
 
 ### Implemented concepts
 
