@@ -13,49 +13,67 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout application repo
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
 
+      # 2️⃣ Setup Node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: npm ci
 
+      # 4️⃣ Lint
       - name: Run Lint
         run: npx eslint .
 
+      # 5️⃣ Login to DockerHub
       - name: Login to DockerHub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      # 6️⃣ Setup Buildx
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      # 7️⃣ Set short SHA as image tag
       - name: Set image tag
         run: echo "IMAGE_TAG=${GITHUB_SHA::7}" >> $GITHUB_ENV
 
+      # 8️⃣ Build and push Docker image
       - name: Build and push multi-arch image
         run: |
           docker buildx build \
             --platform linux/amd64,linux/arm64 \
-            -t doragayev/portfolio-project:$IMAGE_TAG \
+            -t doragayev/portfolio-project:${IMAGE_TAG} \
             --push .
 
-      - name: Update image tag in deployment
-        run: |
-          sed -i "s|doragayev/portfolio-project:.*|doragayev/portfolio-project:${IMAGE_TAG}|g" k8s/base/deployment.yaml
+      # 9️⃣ Checkout Helm repository
+      - name: Checkout Helm repository
+        uses: actions/checkout@v4
+        with:
+          repository: doragayev/portfolio-helm-chart
+          token: ${{ secrets.HELM_REPO_TOKEN }}
+          path: helm-repo
 
-      - name: Commit and push changes
+      # 🔟 Update image tag inside Helm values.yaml
+      - name: Update image tag in Helm values.yaml
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git add k8s/base/deployment.yaml
-          git commit -m "update image tag [skip ci]" || echo "No changes"
+          cd helm-repo/portfolio
+          sed -i "s/tag:.*/tag: \"${IMAGE_TAG}\"/" values.yaml
+
+      # 1️⃣1️⃣ Commit and push Helm repo changes
+      - name: Commit and push Helm changes
+        run: |
+          cd helm-repo
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add portfolio/values.yaml
+          git commit -m "Update image tag to ${IMAGE_TAG}" || echo "No changes to commit"
           git push
