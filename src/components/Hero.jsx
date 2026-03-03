@@ -25,7 +25,7 @@ export default function Hero() {
             </p>
             <p className="text-slate-600 text-lg max-w-2xl mb-8 leading-relaxed">
               DevOps-oriented NOC Engineer experienced in monitoring and supporting mission-critical production systems in secure on-prem environments.
-              Skilled in incident response, system reliability, and operational troubleshooting, while building hands-on experience with CI/CD pipelines, Docker, and modern DevOps practices .
+              Skilled in incident response, system reliability, and operational troubleshooting, while building hands-on experience with CI/CD pipelines, Docker, and modern DevOps practices.
             </p>
 
             {/* CTA buttons */}
